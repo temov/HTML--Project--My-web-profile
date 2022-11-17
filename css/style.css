@@ -1,0 +1,118 @@
+
+html{
+    background: white;
+}
+head, body{
+    margin:0 auto;
+    padding: 0 auto;
+}
+body{
+    width:680px;
+    background: #B3CBFF;
+    position: relative;
+    border: 1px solid grey;
+    font-family: Cuprum;
+}
+
+h1 {
+font-family: Arial, Tahoma;
+font-style:italic;
+font-size:20px;
+text-decoration: none;
+color:white;
+padding: 10px;
+padding-top: 5px;
+margin: 0;
+letter-spacing: 2px;
+    text-transform:uppercase;
+    font-family: Cuprum;
+}
+h2{
+    text-align: right;
+    padding: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+    font-family: Cuprum;
+}
+    
+hgroup{
+    background:url(../images/markus-spiske-I-0OS5iRp0Q-unsplash.jpg) no-repeat;
+    background-size: 680px 200px;
+    text-decoration: none;
+    margin: 0;
+    
+}
+.pageHeader nav{
+    width: 680px;
+    margin: 0;
+    background:grey;
+    font-family: Cuprum;
+}
+
+
+.pageHeader ul{
+    color: blue;
+    list-style:none; 
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin: 0;
+   
+}
+
+.pageHeader li{
+    float: left;
+    margin-right: 25px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color:white;
+    font-family: Cuprum;
+    
+}
+.pageHeader li:hover{
+    color:yellow;
+
+}
+p{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color:black; 
+    padding: 0px 10px 0px 10px;
+    line-height: 20px;
+    text-align: justify;
+    font-family: Cuprum;
+}
+.pageHeader article{
+    margin-top: 30px;
+}
+em{
+    color:yellow;
+}
+#videoContent {
+	margin: 0px auto;
+	width: 480px;
+}
+#list a, a:visited{
+    text-decoration: none;
+    color:white;
+}
+#list a:hover{
+    color:green;
+    background:fade;
+}
+footer {
+	border-top: 1px solid white;
+    margin-top:1em;
+    font-family: Cuprum;
+}
+footer p{
+    text-align: center;
+    color: grey;
+    font-family: Cuprum;
+}
+footer span{
+    margin-right:5px;
+}

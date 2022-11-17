@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MY WEB PROFILE</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="../_scripts/respond.min.js"></script>
+<![endif]-->
+<meta name="viewport" content="initial-scale=1.0" />
+<link href="_css/main.css" rel="stylesheet" media="screen, projection">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link href='https://fonts.google.com/specimen/Cuprum?subset=cyrillic&sidebar.open&selection.family=Cuprum:wght@400;700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css">
+</head>
+<body id="webPage">
+    <header class ="pageHeader">
+    <hgroup>
+      <h1 id="site-title">Мојот Веб Профил</h1>
+      <h2 id="site-description">Да Учиме Заедно</h2>
+    </hgroup>
+        <nav id="pageNav">
+        <ul id="list">
+        <li><a href="https://www.google.com">Дома</a></li>
+        <li><a>За Мене</a></li>
+        <li><a>Контакт</a></li>
+        </ul>
+        </nav>
+        </header>
+        <article>
+        <p> Здраво на сите. <em>Јас сум АНА МАРИЈА,</em> и имам <i>5</i> години. Накратко ќе ви се претставам со неколку видеа кои неодмана ги имам снимено.</p>
+        </article>
+        <div id="videoContent">
+            <video width="480" height="272" controls poster="images/photo-1.jpg">
+            <source src="assets/Main.mp4" type="video/mp4"/>
+            <source src="assets/Main.webm" type="video/webm"/>
+            <source src="assets/Main.ogv" type="video/ogg"/>
+            </video>
+        </div> 
+    <footer> <p><span>&copy;</span>TT Design 2020 </p></footer>
+    <script type="text/javascript" src="_scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+    var videos, sources, i, l, orig, current, modified;
+	sources = document.getElementsByTagName('source');
+	for(i=0, l=sources.length; i<l; i++) {
+		orig = sources[i].getAttribute('src');
+		sources[i].setAttribute('data-orig', orig);
+		sources[i].setAttribute('src', orig.replace(/(\w+)\.(\w+)/, 'Bumper-in.$2'));
+	}
+	videos = document.getElementsByTagName('video');
+	for(i=0, l=videos.length; i<l; i++) {
+		videos[i].load();
+		modified = false;
+		videos[i].addEventListener('ended', function(){
+			sources = this.getElementsByTagName('source');
+			for(i=0, l=sources.length; i<l; i++) {
+				orig = sources[i].getAttribute('data-orig');
+				if (orig) {
+					sources[i].setAttribute('src', orig);
+					modified = true;
+				} else {
+					current = sources[i].getAttribute('src');
+					if (current.indexOf('bumper-out')==-1) {
+						sources[i].setAttribute('src', current.replace(/(\w+)\.(\w+)/, 'Bumper-out.$2'));
+						modified = true;
+					}else{
+						this.pause();
+						modified = false;
+					}
+				}
+				sources[i].setAttribute('data-orig', '');
+			}
+			if (modified) {
+				this.load();
+				this.play();
+			}
+		});
+	}
+</script>
+</body>
+</html>
